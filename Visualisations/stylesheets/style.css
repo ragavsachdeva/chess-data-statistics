@@ -1,0 +1,230 @@
+.cdv-move-paths {
+	  text-align: center;
+	}
+
+	.cdv-move-paths .black rect {
+	  fill: #2b2b2b;
+	}
+
+	.cdv-move-paths .white rect {
+	  fill: #6c6c6c;
+	}
+.jumbotron
+{
+	padding-top: 1em;
+	padding-bottom: 1em;
+	background-color: #DAEEF9;
+}
+
+.l_info_box {
+	position: relative;
+	background: #C04444;
+	border-radius: .4em;
+	color: #DAEEF9;
+}
+
+.l_info_box:after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 50%;
+	width: 0;
+	height: 0;
+	border: 3.125em solid transparent;
+	border-right-color: #C04444;
+	border-left: 0;
+	border-top: 0;
+	margin-top: -1.562em;
+	margin-left: -3.125em;
+}
+
+.r_info_box {
+	position: relative;
+	background: #C04444;
+	border-radius: .4em;
+	color: #DAEEF9;
+}
+
+.r_info_box:after {
+	content: '';
+	position: absolute;
+	right: 0;
+	top: 50%;
+	width: 0;
+	height: 0;
+	border: 3.125em solid transparent;
+	border-left-color: #C04444;
+	border-right: 0;
+	border-top: 0;
+	margin-top: -1.562em;
+	margin-right: -3.125em;
+}
+
+.middle_top
+{
+	height:35em;
+}
+
+
+.middle_between
+{
+	height: 7em;
+}
+
+.middle_bottom
+{
+/*	height: 40em;*/
+}
+
+.left_top
+{
+	height:5em;
+}
+
+
+.left_between
+{
+	height: 9em;
+}
+
+.left_bottom
+{
+	height: 30em;
+}
+
+.right_top
+{
+	height:5em;
+}
+
+
+.right_between
+{
+	height: 9em;
+}
+
+.right_bottom
+{
+	height: 30em;
+}
+
+.black_square
+{
+ background-color: black;
+ color: white;
+}
+
+.white_square
+{
+background-color: white;
+color: black;
+}
+
+.board_square
+{
+	padding: 0px;
+}
+
+.scale
+{
+	font-size: 0.001em;
+	padding: 0px;
+	margin-left: 0.5em;
+	margin-right: 0.5em;
+	display: flex;
+  	justify-content: space-between;
+}
+
+.piece-label
+{
+	transform: scaleY(-1);
+	font-size: 0.8em;
+	color: #150F0F;
+	position:absolute;
+    bottom:0;
+    right:0;
+    margin-right: 01em;
+    margin-bottom: 0.7em;
+}
+
+.fmd_square
+{
+	background-color: white;
+	margin: 0.1em;
+}
+
+#title
+{
+	color: #C04444;
+	text-align: center;
+	font-size: 4.5em;
+  	font-family: 'Raleway', Helvetica, Arial, sans-serif; 
+  	padding:0.2em 0.2em 0 0.2em;
+  	margin-top: 0.2em;
+  	background-color: #150F0F;
+}
+
+#title > span
+{	padding: 0.1em;
+	color: #DAEEF9;
+	background-color: #C04444;
+}
+
+#blackKingContainer
+{
+	position:relative;
+}
+
+#blackKing
+{
+	position: absolute;
+	bottom: 0;
+}
+
+body{
+	color: #C04444;
+	width: 1680px
+	height: 2376px;
+	background: url(../vector_images/king.svg);
+  	background-size: 1680px 2376px;
+}
+
+.vertical-line
+{
+      background-color: #C04444; /* Line color */
+      /*height: 100%;*/ /* Override in-line if you want specific height. */
+      float: left; /* Causes the line to float to left of content. 
+        You can instead use position:absolute or display:inline-block
+        if this fits better with your design */
+}
+
+.capturedHeatMap
+{
+	margin: auto;
+}
+
+.firstMoveDistribution
+{
+	margin: auto;
+}
+
+.winratio > div
+{
+	float: left;
+}
+
+.fmd_square
+{
+	transform: scaleY(-1)
+}
+
+.container
+{
+	width: 1680px;
+	height: 2376px;
+}
+
+.card-block
+{
+	padding: 1.5em;
+}
