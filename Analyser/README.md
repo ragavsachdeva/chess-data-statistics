@@ -87,6 +87,7 @@ analyser.start(games)
 ### Note
 * Add ####### in your PGN file, where you want your program to terminate. If you want to analyse all of the file, add that at the end.
 * All data will be appended to output.txt
+* A sample main.py and test\_input.pgn is uploaded so you can start using the package as soon as you download it
 * If you have a large data file, this may take a while. For me, analysing 250k+ games took around 30 minutes
 * The extracted data is of the exact format that the visualisation script uses
 * The program does not take into account [En Passant](https://en.wikipedia.org/wiki/En_passant) moves. So make sure you filter those games out. (I know it's a bit of a pain if the dataset is too large... apologies)
