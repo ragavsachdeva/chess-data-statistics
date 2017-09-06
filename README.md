@@ -6,7 +6,7 @@ A package that analyses chess games (in PGN format) using python modules along w
 
 * A PGN parser
 * A game "simulator" - move generation and validation
-* A game analyser - Capture Squares Frequency, First Move Distibution, Piece Trajectory and Win Ratio [click for more info](/Analyser/README.md)
+* A game analyser - Capture Squares Frequency, First Move Distibution, Piece Trajectory and Win Ratio - [more info](/Analyser/README.md)
 * Data visualisation
 
 ## Getting Started
@@ -31,6 +31,6 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 Thanks to Niklas Fiekas for publishing his [python-chess](https://github.com/niklasf/python-chess) library. The game simulator functionality is ported directly from his work.
 
-Thanks to Renato de Pontes Pereira for his publishing his approach to parsing a PGN file. The parsing algorithms are based off of his work.
+Thanks to Renato de Pontes Pereira for his publishing his approach to [parsing a PGN file](https://github.com/renatopp/pgnparser). The parsing algorithms are based off of his work.
 
 Thanks to ebemunk for publishing his [chess-dataviz](https://github.com/ebemunk/chess-dataviz) library. The 'journey of a piece' visualisation utilizes his work and 'captured squares' heat map was influenced by his version.
