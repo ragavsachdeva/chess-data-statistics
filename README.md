@@ -11,7 +11,7 @@ A package that analyses chess games (in PGN format) using python modules along w
 
 ## Getting Started
 
-Assuming that you have a PGN file with some chess games, you can use:
+Assuming that you have a PGN file with some chess games, you can use: <br />
 [Analyser](/Analyser) - to extract meaningful data from the PGN file
 [Visualisations](/Visualisations) - to visualise the extracted data
 
