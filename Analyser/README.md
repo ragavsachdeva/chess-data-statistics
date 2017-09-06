@@ -95,7 +95,7 @@ analyser.start(games)
 #### Notation
 If you have absolutely no idea about standard chess notations, here is what a chess board looks like:
 
-![image](CB.png = 250x250)
+![Alt text](CB.png?raw=true = 250x250)
 
 And chess pieces [as on the above board] are represented by:
 ```
