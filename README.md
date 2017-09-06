@@ -25,7 +25,7 @@ You need to have python installed on your computer in order to use analysis modu
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
 
 ## Acknowledgments
 
@@ -33,4 +33,4 @@ Thanks to Niklas Fiekas for publishing his [python-chess](https://github.com/nik
 
 Thanks to Renato de Pontes Pereira for his publishing his approach to [parsing a PGN file](https://github.com/renatopp/pgnparser). The parsing algorithms are based off of his work.
 
-Thanks to ebemunk for publishing his [chess-dataviz](https://github.com/ebemunk/chess-dataviz) library. The 'journey of a piece' visualisation utilizes his work and 'captured squares' heat map was influenced by his version.
+Thanks to ebemunk for publishing his [chess-dataviz](https://github.com/ebemunk/chess-dataviz) library. The 'journey of a piece' visualisation directly utilizes his work and 'captured squares' heat map was influenced by his version.
