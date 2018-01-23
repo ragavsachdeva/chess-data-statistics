@@ -5,7 +5,7 @@ Python modules that analyses chess game(s) in PGN format
 ### Functionality
 
 * Capture Squares Frequency - number of pieces that are captured on each square<br />
-Output format: {"Square": number_of_captured_pieces, ...}
+Output format: {"Square": frequency, ...}
 ```
 For e.g.
 
@@ -28,7 +28,7 @@ For e.g.
 {"g7": {"g7-g6": 1, "g6-h5": 1}, "Qd8": {"f6-e7": 1, "a7-a2": 1, "a2-a7": 1, "b7-f7": 1, "c7-b6": 1, "c7-b7": 1, "a2-d5": 1, "c6-c7": 1, "d8-f6": 1, "d5-b5": 1, "f7-f8": 1, "b6-a5": 1, "a5-a2": 1, "b5-c6": 1, "e7-c7": 1, "c7-f7": 1, "f7-c7": 1}, "f2": {"f4-f5": 1, "f2-f4": 1}, "g2": {"g5-g6": 1, "g6-g7": 1, "g2-g3": 1, "g4-g5": 1, "g3-g4": 1}, "f7": {"f7-f6": 1}, "h2": {"h2-h4": 1}, "Qd1": {"f6-e7": 1, "d2-b2": 1, "h6-e6": 2, "e7-b4": 1, "b2-c3": 1, "e8-g6": 1, "b3-e6": 1, "e6-e7": 1, "e6-g6": 1, "e7-e6": 1, "c3-c5": 1, "b4-b3": 1, "c5-c3": 1, "d1-e2": 1, "e2-e3": 1, "e6-e8": 1, "e3-d2": 1, "c3-f6": 1, "g6-h6": 2}, "h7": {"h7-h6": 1}, "Ke8": {"e8-g8": 1, "h7-h8": 1, "g7-g8": 1, "g8-g7": 1, "g8-h8": 3, "h8-g8": 2, "h8-h7": 1}, "Bf1": {"e2-h5": 1, "f1-c4": 1, "c4-e2": 1}, "a2": {"a3-a4": 1, "a4-b5": 1, "a2-a3": 1}, "Bc8": {"a4-c6": 1, "c8-d7": 1, "c6-d5": 1, "d5-c4": 1, "c4-d5": 1, "d7-a4": 1}, "Ng1": {"g1-f3": 1, "f3-e5": 1}, "b2": {"b4-b5": 1, "b2-b4": 1}, "d7": {"d7-d5": 1, "d5-c4": 1}, "a7": {"a6-b5": 1, "a7-a6": 1}, "c2": {"c2-c4": 1}, "e7": {"e7-e6": 1}, "Bf8": {"f8-b4": 1, "d6-e5": 1, "b4-d6": 1}, "d2": {"d2-d4": 1}, "Bc1": {"c1-g5": 1, "g5-f6": 1}, "e2": {"e3-d4": 1, "e5-f6": 1, "d4-e5": 1, "e2-e3": 1}, "Ng8": {"g8-f6": 1}, "Rh8": {"d8-f8": 1, "f8-e8": 1, "f8-f6": 1, "f7-f6": 1, "e8-d8": 1, "f6-f7": 1, "h8-f8": 1}, "Nb8": {"b8-c6": 2, "c6-b8": 1, "c6-e7": 1}, "Rh1": {"h1-f1": 1, "d1-d2": 1, "f1-d1": 1}, "c7": {"c7-c5": 1, "c5-d4": 1}, "Nb1": {"d6-e8": 1, "e4-d6": 1, "e8-f6": 1, "c3-e4": 1, "b1-c3": 1}, "b7": {"b7-b5": 1, "b5-b4": 1}, "Ra8": {"d8-d2": 1, "a8-d8": 1}, "Ra1": {"a1-c1": 1, "c1-d1": 1, "d1-d5": 1}, "Ke1": {"f1-g2": 1, "h4-h5": 1, "e1-g1": 1, "h3-h4": 1, "g2-h3": 1, "g1-f1": 1}}
 ```
 * Win Ratio - number of White wins, Black wins and Draws<br />
-Output format: White Wins: number, Black Wins: number, Draw: number
+Output format: White Wins: frequency, Black Wins: frequency, Draws: frequency
 ```
 For e.g.
 
