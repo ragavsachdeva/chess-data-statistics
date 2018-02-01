@@ -55,10 +55,32 @@ analyser = analyse.ReplaceThisWithTheAnalysisYouWant()
 analyser.start(games)
 
 ```
-To get the Capture Squares Frequency:
+
+To get the Captured Squares:
 
 ```
 analyser = analyse.CapturedSquares()
+analyser.start(games)
+```
+
+To get the Capturing Squares:
+
+```
+analyser = analyse.CapturingSquares()
+analyser.start(games)
+```
+
+To get the Opening Moves:
+
+```
+analyser = analyse.ComputeOpenings()
+analyser.start(games)
+```
+
+To get the Square Utilisation:
+
+```
+analyser = analyse.SquareUtilisation()
 analyser.start(games)
 ```
 
