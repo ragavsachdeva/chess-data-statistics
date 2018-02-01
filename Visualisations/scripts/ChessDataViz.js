@@ -13269,8 +13269,8 @@ var HeatMap = (function () {
 		//root svg
 		var root = this.container.append('svg').attr('width', this._options.width + 'px').attr('height', this._options.width + 'px').attr('class', 'graph');
 
-		//margins applied
-		var svg = root.append('g').attr('transform', 'translate(' + this._options.margin + ',' + this._options.margin + ')').attr('class', 'board');
+		// //margins applied
+		// var svg = root.append('g').attr('transform', 'translate(' + this._options.margin + ',' + this._options.margin + ')').attr('class', 'board');
 
 		util.drawBoard(svg, this._options.squareWidth);
 
@@ -13445,7 +13445,7 @@ var MovePaths = (function () {
 		this.container.selectAll('*').remove();
 
 		//root svg
-		var root = this.container.append('svg').attr('width', this._options.width + 'px').attr('height', this._options.width + 'px').attr('class', 'graph');
+		var root = this.container.append('svg').attr('width', this._options.boardWidth + 'px').attr('height', this._options.boardWidth + 'px').attr('class', 'graph');
 
 		//margins applied
 		var svg = root.append('g').attr('transform', 'translate(' + this._options.margin + ',' + this._options.margin + ')').attr('class', 'board');

@@ -1989,14 +1989,14 @@ fieldset[disabled] a.btn {
 
 .btn-primary {
   color: #fff;
-  background-color: #007bff;
+  background-color: black;
   border-color: #007bff;
 }
 
 .btn-primary:hover {
   color: #fff;
-  background-color: #0069d9;
-  border-color: #0062cc;
+  background-color: #C04444;
+  border-color: #C04444;
 }
 
 .btn-primary:focus, .btn-primary.focus {
@@ -2010,9 +2010,9 @@ fieldset[disabled] a.btn {
 
 .btn-primary:active, .btn-primary.active,
 .show > .btn-primary.dropdown-toggle {
-  background-color: #0069d9;
+  background-color: #C04444;
   background-image: none;
-  border-color: #0062cc;
+  border-color: #C04444;
 }
 
 .btn-secondary {
@@ -2646,7 +2646,7 @@ tbody.collapse.show {
 .btn-group-vertical {
   position: relative;
   display: -ms-inline-flexbox;
-  display: inline-flex;
+/*  display: inline-flex;*/
   vertical-align: middle;
 }
 
@@ -2980,7 +2980,7 @@ tbody.collapse.show {
 
 .custom-control-input:active ~ .custom-control-indicator {
   color: #fff;
-  background-color: #b3d7ff;
+  background-color: #C04444;
 }
 
 .custom-control-input:disabled ~ .custom-control-indicator {

@@ -1,111 +1,64 @@
-.cdv-move-paths {
-	  text-align: center;
-	}
 
-	.cdv-move-paths .black rect {
-	  fill: #2b2b2b;
-	}
+#main {
+  float: left;
+  position: absolute;
+/*  margin-top: -28em;*/
+}
 
-	.cdv-move-paths .white rect {
-	  fill: #6c6c6c;
-	}
-.jumbotron
+#board3
 {
-	padding-top: 1em;
-	padding-bottom: 1em;
-	background-color: #DAEEF9;
+  position: relative;
+  margin-left: 16.5em;
+  margin-top: 24em;
+  z-index: -1;
 }
 
-.l_info_box {
-	position: relative;
-	background: #C04444;
-	border-radius: .4em;
-	color: #DAEEF9;
-}
-
-.l_info_box:after {
-	content: '';
-	position: absolute;
-	left: 0;
-	top: 50%;
-	width: 0;
-	height: 0;
-	border: 3.125em solid transparent;
-	border-right-color: #C04444;
-	border-left: 0;
-	border-top: 0;
-	margin-top: -1.562em;
-	margin-left: -3.125em;
-}
-
-.r_info_box {
-	position: relative;
-	background: #C04444;
-	border-radius: .4em;
-	color: #DAEEF9;
-}
-
-.r_info_box:after {
-	content: '';
-	position: absolute;
-	right: 0;
-	top: 50%;
-	width: 0;
-	height: 0;
-	border: 3.125em solid transparent;
-	border-left-color: #C04444;
-	border-right: 0;
-	border-top: 0;
-	margin-top: -1.562em;
-	margin-right: -3.125em;
-}
-
-.middle_top
+#trail
 {
-	height:35em;
+ /* margin-top: -40em;*/
+
 }
 
-
-.middle_between
-{
-	height: 7em;
+#sequence text {
+  fill: #fff;
+  font-size: 1em;
 }
 
-.middle_bottom
-{
-/*	height: 40em;*/
+#chart {
+  position: relative;
+  /*margin-top: -40em;*/
+  margin-left: 20em;
+  z-index: 1;
 }
 
-.left_top
-{
-	height:5em;
+#chart path {
+  stroke: #fff;
 }
 
-
-.left_between
+.horizontal-scroll-wrapper 
 {
-	height: 9em;
+  background-image: url("../images/new.png");
+  background-repeat:   no-repeat;
+  background-size: contain;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transform: rotate(-90deg);
+  transform-origin: right top;
 }
 
-.left_bottom
+.horizontal-scroll-wrapper > div 
 {
-	height: 30em;
+  color: black;
+  transform: rotate(90deg);
+  transform-origin: right top;
+  padding-top: 2em;
 }
 
-.right_top
+body
 {
-	height:5em;
-}
-
-
-.right_between
-{
-	height: 9em;
-}
-
-.right_bottom
-{
-	height: 30em;
+  background-color: #6D6D6D;
+  overflow:hidden;
+  font-size: 2em;
 }
 
 .black_square
@@ -122,109 +75,182 @@ color: black;
 
 .board_square
 {
-	padding: 0px;
+  padding: 0px;
 }
 
-.scale
-{
-	font-size: 0.001em;
-	padding: 0px;
-	margin-left: 0.5em;
-	margin-right: 0.5em;
-	display: flex;
-  	justify-content: space-between;
+.cdv-move-paths {
+    text-align: center;
+  }
+
+.cdv-move-paths .black rect {
+    fill: #2b2b2b;
+  }
+
+.cdv-move-paths .white rect {
+    fill: white;
+  }
+
+#slidecontainer {
+    width: 100%; /* Width of the outside container */
 }
 
-.piece-label
-{
-	transform: scaleY(-1);
-	font-size: 0.8em;
-	color: #150F0F;
-	position:absolute;
-    bottom:0;
-    right:0;
-    margin-right: 01em;
-    margin-bottom: 0.7em;
+/* The slider itself */
+.slider {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 100%; /* Full-width */
+    height: 15px;
+    border-radius: 5px; 
+    background: #d3d3d3; /* Grey background */
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
 }
 
-.fmd_square
-{
-	background-color: white;
-	margin: 0.1em;
+/* Mouse-over effects */
+.slider:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use webkit (Chrome, Opera, Safari, Edge) and moz (Firefox) to override default look) */ 
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 50px; /* Set a specific slider handle width */
+    height: 50px;
+    border-radius: 50%;
+    background: #4CAF50; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+    width: 50px; /* Set a specific slider handle width */
+    height: 50px;
+    border-radius: 50%;
+    background: #4CAF50; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: white;
+    text-align: center;
+}
+
+.modal-body {
+  padding: 2px 16px;
+  text-align: center;
+}
+
+.modal-footer {
+    padding: 2px 16px;
+    background-color: white;
+    text-align: center;
 }
 
 #title
 {
-	color: #C04444;
-	text-align: center;
-	font-size: 4.5em;
-  	font-family: 'Raleway', Helvetica, Arial, sans-serif; 
-  	padding:0.2em 0.2em 0 0.2em;
-  	margin-top: 0.2em;
-  	background-color: #150F0F;
+  color: #2d2d2d;
+  text-align: center;
+  font-size: 1em;
+    font-family: 'Raleway', Helvetica, Arial, sans-serif; 
+    padding:0.2em 0.2em 0 0.2em;
+    margin-top: 0.2em;
 }
 
 #title > span
-{	padding: 0.1em;
-	color: #DAEEF9;
-	background-color: #C04444;
+{ padding: 0.1em;
+  color: #FDFEFD;
+  background-color: #2d2d2d;
 }
 
-#blackKingContainer
+.explainingViz
 {
-	position:relative;
+  font-size: 2em;
 }
 
-#blackKing
+
+.settings
 {
-	position: absolute;
-	bottom: 0;
+  color: white;
 }
 
-body{
-	color: #C04444;
-	width: 1680px
-	height: 2376px;
-	background: url(../vector_images/king.svg);
-  	background-size: 1680px 2376px;
+.instruction {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
 }
 
-.vertical-line
-{
-      background-color: #C04444; /* Line color */
-      /*height: 100%;*/ /* Override in-line if you want specific height. */
-      float: left; /* Causes the line to float to left of content. 
-        You can instead use position:absolute or display:inline-block
-        if this fits better with your design */
+.instruction .instructiontext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    font-size: 0.5em;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
 }
 
-.capturedHeatMap
-{
-	margin: auto;
-}
-
-.firstMoveDistribution
-{
-	margin: auto;
-}
-
-.winratio > div
-{
-	float: left;
-}
-
-.fmd_square
-{
-	transform: scaleY(-1)
-}
-
-.container
-{
-	width: 1680px;
-	height: 2376px;
-}
-
-.card-block
-{
-	padding: 1.5em;
+.instruction:hover .instructiontext {
+    visibility: visible;
 }

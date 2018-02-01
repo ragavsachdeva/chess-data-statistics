@@ -1,554 +1,482 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<title>Poster</title>
-	<link rel="stylesheet" type="text/css" href="stylesheets/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="stylesheets/style.css">
-	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-	<link href="stylesheets/ChessDataViz.css" rel="stylesheet">
-	<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+		<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 
-</head>
-<body>
-	<div class="container">
-	  	<div class="row">
-	  		<div class="col-xl">
-	  				<div  id="title">
-	  				<span style="color: #C04444; background-color: #150F0F ">❝</span> <span>When</span> <span>you</span> <span>see</span> <span>a</span> <span>good</span> <span> move</span><br>wait and look for a better one ❞ <!-- <br><div style="color: #C04444; margin-top: -0.4em; background-color: #150F0F; font-size: 0.6em">- Emanuel Lasker</div> -->
-	  				</div>
-	  		</div>
-	  	</div>
-	  	<br>
-	  	<div class="row">
-	  		<!-- Left Column -->
-	  		<div class="col-xl-4">
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" type="text/css" href="stylesheets/bootstrap.css">
 
-	  			<div class="row justify-content-center left_top"></div>
-	  			
-	  			<div class="row">
-			  		<!-- Captured Sqaures - Heat Map  -->
-			  		<div class="col capturedHeatMap">
-			  		<div class="jumbotron" id="capturedHeatMapJumbotron" style="margin-left: 3em;">
-					  	<!-- 8 -->
-					 	<div class="row">
-						    <div class="col-xl board_square white_square captured_map_square" id = "a8">
-						     
-						    </div>
-						    <div class="col-xl board_square black_square captured_map_square" id = "b8">
-						     
-						    </div>
-						    <div class="col-xl board_square white_square captured_map_square" id = "c8">
-						     
-						    </div>
-						    <div class="col-xl board_square black_square captured_map_square" id = "d8">
-						     
-						    </div>
-						    <div class="col-xl board_square white_square captured_map_square" id = "e8">
-						     
-						    </div>
-						    <div class="col-xl board_square black_square captured_map_square" id = "f8">
-						     
-						    </div>
-						    <div class="col-xl board_square white_square captured_map_square" id = "g8">
-						     
-						    </div>
-						    <div class="col-xl board_square black_square captured_map_square" id = "h8">
-						     
-						    </div>
-						</div>
-						<!-- 7 -->
-						<div class="row">
-						    <div class="col-xl board_square black_square captured_map_square" id = "a7">
-						     
-						    </div>
-						    <div class="col-xl board_square white_square captured_map_square" id = "b7">
-						     
-						    </div>
-						    <div class="col-xl board_square black_square captured_map_square" id = "c7">
-						     
-						    </div>
-						    <div class="col-xl board_square white_square captured_map_square" id = "d7">
-						     
-						    </div>
-						    <div class="col-xl board_square black_square captured_map_square" id = "e7">
-						     
-						    </div>
-						    <div class="col-xl board_square white_square captured_map_square" id = "f7">
-						     
-						    </div>
-						    <div class="col-xl board_square black_square captured_map_square" id = "g7">
-						     
-						    </div>
-						    <div class="col-xl board_square white_square captured_map_square" id = "h7">
-						     
-						    </div>
-						</div>
-						<!-- 6 -->
-						<div class="row">
-						    <div class="col-xl board_square white_square captured_map_square" id = "a6">
-						     
-						    </div>
-						    <div class="col-xl board_square black_square captured_map_square" id = "b6">
-						     
-						    </div>
-						    <div class="col-xl board_square white_square captured_map_square" id = "c6">
-						     
-						    </div>
-						    <div class="col-xl board_square black_square captured_map_square" id = "d6">
-						     
-						    </div>
-						    <div class="col-xl board_square white_square captured_map_square" id = "e6">
-						     
-						    </div>
-						    <div class="col-xl board_square black_square captured_map_square" id = "f6">
-						     
-						    </div>
-						    <div class="col-xl board_square white_square captured_map_square" id = "g6">
-						     
-						    </div>
-						    <div class="col-xl board_square black_square captured_map_square" id = "h6">
-						     
-						    </div>
-						</div>
-						<!-- 5 -->
-						<div class="row">
-						    <div class="col-xl board_square black_square captured_map_square" id = "a5">
-						     
-						    </div>
-						    <div class="col-xl board_square white_square captured_map_square" id = "b5">
-						     
-						    </div>
-						    <div class="col-xl board_square black_square captured_map_square" id = "c5">
-						     
-						    </div>
-						    <div class="col-xl board_square white_square captured_map_square" id = "d5">
-						     
-						    </div>
-						    <div class="col-xl board_square black_square captured_map_square" id = "e5">
-						     
-						    </div>
-						    <div class="col-xl board_square white_square captured_map_square" id = "f5">
-						     
-						    </div>
-						    <div class="col-xl board_square black_square captured_map_square" id = "g5">
-						     
-						    </div>
-						    <div class="col-xl board_square white_square captured_map_square" id = "h5">
-						     
-						    </div>
-						</div>
-						<!-- 4 -->
-						<div class="row">
-						    <div class="col-xl board_square white_square captured_map_square" id = "a4">
-						     
-						    </div>
-						    <div class="col-xl board_square black_square captured_map_square" id = "b4">
-						     
-						    </div>
-						    <div class="col-xl board_square white_square captured_map_square" id = "c4">
-						     
-						    </div>
-						    <div class="col-xl board_square black_square captured_map_square" id = "d4">
-						     
-						    </div>
-						    <div class="col-xl board_square white_square captured_map_square" id = "e4">
-						     
-						    </div>
-						    <div class="col-xl board_square black_square captured_map_square" id = "f4">
-						     
-						    </div>
-						    <div class="col-xl board_square white_square captured_map_square" id = "g4">
-						     
-						    </div>
-						    <div class="col-xl board_square black_square captured_map_square" id = "h4">
-						     
-						    </div>
-						</div>
-						<!-- 3 -->
-						<div class="row">
-						    <div class="col-xl board_square black_square captured_map_square" id = "a3">
-						     
-						    </div>
-						    <div class="col-xl board_square white_square captured_map_square" id = "b3">
-						     
-						    </div>
-						    <div class="col-xl board_square black_square captured_map_square" id = "c3">
-						     
-						    </div>
-						    <div class="col-xl board_square white_square captured_map_square" id = "d3">
-						     
-						    </div>
-						    <div class="col-xl board_square black_square captured_map_square" id = "e3">
-						     
-						    </div>
-						    <div class="col-xl board_square white_square captured_map_square" id = "f3">
-						     
-						    </div>
-						    <div class="col-xl board_square black_square captured_map_square" id = "g3">
-						     
-						    </div>
-						    <div class="col-xl board_square white_square captured_map_square" id = "h3">
-						     
-						    </div>
-						</div>
-						<!-- 2 -->
-						<div class="row">
-						    <div class="col-xl board_square white_square captured_map_square" id = "a2">
-						     
-						    </div>
-						    <div class="col-xl board_square black_square captured_map_square" id = "b2">
-						     
-						    </div>
-						    <div class="col-xl board_square white_square captured_map_square" id = "c2">
-						     
-						    </div>
-						    <div class="col-xl board_square black_square captured_map_square" id = "d2">
-						     
-						    </div>
-						    <div class="col-xl board_square white_square captured_map_square" id = "e2">
-						     
-						    </div>
-						    <div class="col-xl board_square black_square captured_map_square" id = "f2">
-						     
-						    </div>
-						    <div class="col-xl board_square white_square captured_map_square" id = "g2">
-						     
-						    </div>
-						    <div class="col-xl board_square black_square captured_map_square" id = "h2">
-						     
-						    </div>
-						</div>
-						<!-- 1 -->
-						<div class="row">
-						    <div class="col-xl board_square black_square captured_map_square" id = "a1">
-						     
-						    </div>
-						    <div class="col-xl board_square white_square captured_map_square" id = "b1">
-						     
-						    </div>
-						    <div class="col-xl board_square black_square captured_map_square" id = "c1">
-						     
-						    </div>
-						    <div class="col-xl board_square white_square captured_map_square" id = "d1">
-						     
-						    </div>
-						    <div class="col-xl board_square black_square captured_map_square" id = "e1">
-						     
-						    </div>
-						    <div class="col-xl board_square white_square captured_map_square" id = "f1">
-						     
-						    </div>
-						    <div class="col-xl board_square black_square captured_map_square" id = "g1">
-						     
-						    </div>
-						    <div class="col-xl board_square white_square captured_map_square" id = "h1">
-						     
-						    </div>
-						    <div class="card-block" style="width: 100%">
-						      <h4 class="card-title">Capture Squares<br>
-						      	<span style="font-size: 0.6em;">Squares where a <i>piece capture</i> occurs</span>
-						      </h4>
-						      <p class="card-text">The centre of the board is the heart of the battle.<br>
-							  Notice that the distribution is almost symmetrical about horizontal axis.<br>However, more blood is shed on the Queen's side of the board, bloodiest squares being d4 and d5.
-						      </p>
-						    </div>
-						</div>
-					</div>
-					</div>
-				</div>
+		<link href="stylesheets/ChessDataViz.css" rel="stylesheet">
+		<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.bundle.js"></script>
 
-				<div class="row justify-content-center left_between"></div>
+		<!-- ChessBoardjs.com css -->
+		<link rel="stylesheet" type="text/css" href="stylesheets/chessboard-0.3.0.css">
 
-				<div class="row">
-					<div class="col-xl-12">
-						<div class="jumbotron" id="winRatioJumbotron" style="margin-left: 3em;">
-							<div class="row">
-							<div class="col">
-								<div class="imagesBar winratio" id="winsgraph">
-									<div id="whiteKingContainer">
-										<img src="vector_images/white_king.svg" id="whiteKing">
-									</div>
-									<div id="blackKingContainer">
-										<img src="vector_images/black_king.svg" id="blackKing">
-									</div>
-								</div>
-							</div>
-							</div>
-							<div class="row">
-							<div class="col">
-							<div class="card-block" style="width: 100%">
-							      <h4 class="card-title">White vs Black</h4>
-							      <p class="card-text">								      	
-							      On average White wins 1.55 times more than Black - most likely because it can always "dictate" the opening.<br> But it really comes down to how much you need opening theory to win chess games at your level. 
- The lower you are rated, the less you really need to depend on openings to win and consequently, the choice of colors might not really matter.
-								      
-							      </p>
-							</div>
-							</div>
-							</div>
-						</div>
-					</div>
-				</div>
+	</head>
+	<body>
 
+		<nav class="navbar navbar-light" id = "navbar" style="background-color: #2d2d2d; height: 4em; text-align: right">
+			<ul class="nav navbar-nav navbar-right">
+			<li><button id="myBtn">Compare Visualisations</button></li>
+			</ul>
+		</nav>
 
-				<div class="row justify-content-center left_bottom"></div>
+		<div class="container">
+			<!-- The Modal -->
+			<div id="myModal" class="modal">
 
-			</div>
-			<!-- Middle column -->
-			<div class="col-xl-4">
-				
-				<div class="row justify-content-center middle_top"></div>
+			  <!-- Modal content -->
+			  <div class="modal-content">
+			    <div class="modal-header">
+			      <span class="close">&times;</span>
+			      <h2>Comparator</h2>
+			    </div>
+			    <div class="modal-body">
+			      <div class="row">
+			      	<div class="col-xl-6">
+			      		<div class="row">
+			      			<div class="col-xl">
+			      				<select id="c1" onchange="c1()">
+								  <option value="c1heatmap">Heat Map
+								  <option value="c1journeymap">Journey Map
+								</select>
+			      			</div>
+			      		</div>
+			      		<div class="row">
+			      			<div class="col-xl" id="c1viz">
+			      				
+			      			</div>
+			      		</div>
+			      	</div>
+			      	<div class="col-xl-6">
+			      		<div class="row">
+			      			<div class="col-xl">
+			      				<select id="c2" onchange="c2()">
+								  <option value="c2heatmap">Heat Map
+								  <option value="c2journeymap" selected="selected">Journey Map
+								</select>
+			      			</div>
+			      		</div>
+			      		<div class="row">
+			      			<div class="col-xl" id="c2viz">
+			      				
+			      			</div>
+			      		</div>
+			      	</div>
+			      </div>
+			    </div>
+			    <div class="modal-footer">
+			      <h3>Modal Footer</h3>
+			    </div>
+			  </div>
 
-				<div class="row justify-content-center">
-					<div class="col-5">
-						<hgroup class="l_info_box">
-							<div class="card-block">
-						      <h4 class="card-title">Control The Centre</h4>
-						      <p class="card-text">Controlling the centre means:<br>
-							      
-							      	1. Greater influence over the board.<br>
-							      	2. Greater mobility of pieces.
-							      
-						      </p>
-						    </div>
-						</hgroup>
-					</div>
-				</div>
-				
-
-				<div class="row justify-content-center middle_between"></div>
-
-				<div class="row justify-content-center">
-					<div class="col-5">
-						<hgroup class="r_info_box">
-							<div class="card-block">
-						      <h4 class="card-title">Carefully Develop Your Pieces</h4>
-						      <p class="card-text">
-							      
-							      	1. Don't bring the queen out early.<br>
-							      	2. Develop minor pieces first - usually knights before bishops.
-							      
-						      </p>
-						    </div>
-						</hgroup>
-					</div>
-				</div>
-
-				<div class="row justify-content-center middle_between"></div>
-
-				<div class="row justify-content-center">
-					<div class="col-5">
-						<hgroup class="l_info_box">
-							<div class="card-block">
-						      <h4 class="card-title">White vs Black<br>
-						      </h4>
-						      <p class="card-text">
-							      
-							      	In chess, the player who makes the first move has a slight advantage -
-							      	which happens to be white.
-							      
-						      </p>
-						    </div>
-						</hgroup>
-					</div>
-				</div>
-
-				<div class="row justify-content-center middle_between"></div>
-
-				<div class="row justify-content-center">
-					<div class="col-5">
-						<hgroup class="r_info_box">
-							<div class="card-block">
-						      <h4 class="card-title">Strategically position your pieces</h4>
-						      <p class="card-text">
-								Positioning your pieces at certain key places can drastically improve their potential.
-						      </p>
-						    </div>
-						</hgroup>
-					</div>
-				</div>
-
-				<div class="row justify-content-center middle_bottom"></div>
-
-			</div>
-			
-			<!-- Right column -->
-			<div class="col-xl-4">
-				
-	  			<div class="row justify-content-center right_top"></div>				
-
-				<div class="row">
-				<!-- First Move Distribution -->
-					<div class="col-xl-12 firstMoveDistribution">
-							<div class="jumbotron" id="firstMoveDistributionJumbotron" style="margin-right: 3em;">
-								<!-- kings and queens -->
-									<div class="row">
-									    <div class="col-xl board_square white_square fmd_square" id = "e8">
-									     <span class="piece-label">&#9818;e8</span>
-									    </div>
-									    <div class="col-xl board_square black_square fmd_square" id = "e1">
-									     <span class="piece-label">&#9812;e1</span>
-									    </div>
-									    <div class="col-xl board_square black_square fmd_square" id = "d8">
-									     <span class="piece-label">&#9819;d8</span>
-									    </div>
-									    <div class="col-xl board_square white_square fmd_square" id = "d1">
-									     <span class="piece-label">&#9813;d1</span>
-									    </div>
-									 </div>
-								<!-- knights -->
-									<div class="row">
-
-									    <div class="col-xl board_square white_square fmd_square" id = "b1">
-									     <span class="piece-label">&#9816;b1</span>
-									    </div>
-
-									    <div class="col-xl board_square black_square fmd_square" id = "b8">
-									     <span class="piece-label">&#9822;b8</span>
-									    </div>
-
-									    <div class="col-xl board_square black_square fmd_square" id = "g1">
-									     <span class="piece-label">&#9816;g1</span>
-									    </div>
-
-									    <div class="col-xl board_square white_square fmd_square" id = "g8">
-									     <span class="piece-label">&#9822;g8</span>
-									    </div>
-
-									</div>
-								<!-- bishops -->
-									<div class="row">
-
-									    <div class="col-xl board_square white_square fmd_square" id = "c8">
-									     <span class="piece-label">&#9821;c8</span>
-									    </div>
-
-									    <div class="col-xl board_square black_square fmd_square" id = "c1">
-									     <span class="piece-label">&#9815;c1</span>
-									    </div>
-
-									    <div class="col-xl board_square black_square fmd_square" id = "f8">
-									     <span class="piece-label">&#9821;f8</span>
-									    </div>
-
-									    <div class="col-xl board_square white_square fmd_square" id = "f1">
-									     <span class="piece-label">&#9815;f1</span>
-									    </div>
-									</div>
-
-								<!-- rooks -->
-									<div class="row">
-									    <div class="col-xl board_square black_square fmd_square" id = "a1">
-									     <span class="piece-label">&#9814;a1</span>
-									    </div>
-
-									    <div class="col-xl board_square white_square fmd_square" id = "a8">
-									     <span class="piece-label">&#9820;a8</span>
-									    </div>
-
-									    <div class="col-xl board_square white_square fmd_square" id = "h1">
-									     <span class="piece-label">&#9814;h1</span>
-									    </div>
-
-									    <div class="col-xl board_square black_square fmd_square" id = "h8">
-									     <span class="piece-label">&#9820;h8</span>
-									    </div>
-
-									</div>
-								<!-- Scale -->
-									<div class="row">
-										<div class="col-xl scale">
-											<span>0</span>
-											<span>10</span>
-											<span>20</span>
-											<span>30</span>
-											<span>40</span>
-										</div>
-										<div class="col-xl scale">
-											<span>0</span>
-											<span>10</span>
-											<span>20</span>
-											<span>30</span>
-											<span>40</span>
-										</div>
-										<div class="col-xl scale">
-											<span>0</span>
-											<span>10</span>
-											<span>20</span>
-											<span>30</span>
-											<span>40</span>
-										</div>
-										<div class="col-xl scale">
-											<span>0</span>
-											<span>10</span>
-											<span>20</span>
-											<span>30</span>
-											<span>40</span>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col-xl" style="text-align: center;font-size: 0.001em;">
-											Number of Moves
-										</div>
-									</div>
-
-								<div class="card-block" style="width: 100%">
-							      <h4 class="card-title">When is a piece first moved?!<br>
-							      	<span style="font-size: 0.6em;">Above distribution represents frequency of the point at which a piece is first moved in a game.</span>
-							      </h4>
-							      <p class="card-text">
-								      	
-								      	
-								      	Notice the similarities between the White King and h1 Rook. This is only possible if both the King and the Rook are moved simultaneoulsy (which is known as castling).<br>The same effect is present between the Black King and the h8 Rook.
-								      
-							      </p>
-							    </div>
-							</div>					
-					</div>
-				</div>
-
-				<div class="row justify-content-center right_between"></div>
-
-				<div class="row">
-			  		<!-- Journey of a Queen  -->
-			  		<div class="col journeyMap">
-			  		<div class="jumbotron" id="journeyMapJumbotron" style="margin-right: 3em;">
-					  		
-			  				<div class="row">
-							  	<div class="col-xl" id = "journeyMap">
-							  		<div class="cdv-move-paths" id="movepaths" style="margin-top: 0.3em;">
-									</div>
-								</div>
-							</div>
-
-						    <div class="card-block" style="width: 100%; margin-top:-2.5em ">
-						      <h4 class="card-title">Journey Of A Gallant Knight<br>
-						      <span style="font-size: 0.6em;">Path taken by g1 Knight throughout his life</span>
-						      </h4>
-						      <p class="card-text">
-						      A knight has the ability to jump over other pieces which makes it a powerful asset and studying the path taken by it can be very beneficial.
-							      
-						      </p>
-						    </div>
-						</div>
-					</div>
-					</div>
-				</div>
-
-	  			<div class="row justify-content-center right_bottom"></div>
-
-			</div>
-			<div class="row">
-				<div class="col-xl jumbotron" style="background-color: #150F0F; color:white;">
-				The above visualisations and analysis is based on over 250k games of chess played between GrandMaster level players at renowned competitions. These games were collected in PGN format from websites including FIDE - World Chess Federation and Chess.com.
-					
-				</div>
-				
 			</div>
 		</div>
 
-<script src="scripts/ChessDataViz.js"></script>
-<script type="text/javascript" src="scripts/script.js"></script>
-</body>
+
+		<div class="horizontal-scroll-wrapper squares" id = "scroll_pane">
+			<div class = "scroll_element">IDK WHAT'S HAPPENING HERE</div>
+			<div class = "scroll_element" style="font-family: 'Comic Sans MS'; font-size: 2em;">
+				<div style="margin-left: -5em; font-size: 3em">
+					Chess Data Visualisation
+				</div>
+				<div  id="title">
+	  				<span style="color: #FDFEFD; background-color: #2d2d2d ">❝</span> <span>When</span> <span>you</span> <span>see</span> <span>a</span> <span>good</span> <span> move</span> <span>wait</span><br>- look for a better one ❞ - Emanuel Lasker<br>
+	  				<div class = "instruction" style="color: black">&#9654
+	  					<span class="instructiontext">Scroll down</span>
+	  				</div>
+	  			</div>
+			</div>
+			<div class="scroll_element explainingViz">
+				<div style="font-size: 3em; text-align: center;">
+					Heatmap
+				</div>
+				<div class="row">
+					<div class="col-xl">
+						A heatmap is arguably the best visualisation to show statistics from multiple games. Looking at the frequencies for every square gives one a greater sense of the whole board.<br><br>
+						Following is a heatmap which visualises 3 different kinds of statistics:
+						<div style="font-size: 0.8em">
+							<ul>
+								<li>Captured Squares: The squares where the selected piece is captured the most.</li>
+								<li>Attacking Squares: The squares where the selected piece attacks the most.</li>
+								<li>Square Utilisation: The squares which the selected piece utilises the most.</li>
+							</ul>
+						</div>
+
+					</div>
+				</div>
+			</div>
+			<div class = "scroll_element">
+				<div class="row" id = "heatMapViz" style="margin-top: 3em;">
+					<div class="col-xl-3 settings">
+						<div class="row">
+							<div class="col">
+								<div class="row">
+									<div class="col">
+										Category:
+									</div>
+								</div>
+								<div class="row">
+									<div class="col">
+										<select id="heatMapType" onchange="changeHeatMap()">
+										  <option value="captured_freq">Captured Squares
+										  <option value="capturing_freq">Attacking Squares
+										  <option value="utilisation_freq">Square Utilisation
+										</select>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col" style="padding-top: 1em;">
+								<div class="row">
+									<div class="col">
+										Select piece:
+									</div>
+								</div>
+								<div class="row">
+									<div class="col">
+										<div id="board1"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col" style="padding-top: 1em;text-align: center;">
+								<button type="button" id = "all" class="btn btn-primary btn-lg HM_buttons">All</button>
+								<button type="button" id = "wall" class="btn btn-primary btn-lg HM_buttons">White</button>
+								<button type="button" id = "ball" class="btn btn-primary btn-lg HM_buttons">Black</button>
+							</div>
+						</div>
+
+					</div>
+					<div class="col-xl-6">
+						<div id="heatMap">
+							<!-- 8 -->
+							<div class="row">
+									<div class="col-xl board_square white_square heat_map_square" id = "a8">
+									 
+									</div>
+									<div class="col-xl board_square black_square heat_map_square" id = "b8">
+									 
+									</div>
+									<div class="col-xl board_square white_square heat_map_square" id = "c8">
+									 
+									</div>
+									<div class="col-xl board_square black_square heat_map_square" id = "d8">
+									 
+									</div>
+									<div class="col-xl board_square white_square heat_map_square" id = "e8">
+									 
+									</div>
+									<div class="col-xl board_square black_square heat_map_square" id = "f8">
+									 
+									</div>
+									<div class="col-xl board_square white_square heat_map_square" id = "g8">
+									 
+									</div>
+									<div class="col-xl board_square black_square heat_map_square" id = "h8">
+									 
+									</div>
+							</div>
+							<!-- 7 -->
+							<div class="row">
+									<div class="col-xl board_square black_square heat_map_square" id = "a7">
+									 
+									</div>
+									<div class="col-xl board_square white_square heat_map_square" id = "b7">
+									 
+									</div>
+									<div class="col-xl board_square black_square heat_map_square" id = "c7">
+									 
+									</div>
+									<div class="col-xl board_square white_square heat_map_square" id = "d7">
+									 
+									</div>
+									<div class="col-xl board_square black_square heat_map_square" id = "e7">
+									 
+									</div>
+									<div class="col-xl board_square white_square heat_map_square" id = "f7">
+									 
+									</div>
+									<div class="col-xl board_square black_square heat_map_square" id = "g7">
+									 
+									</div>
+									<div class="col-xl board_square white_square heat_map_square" id = "h7">
+									 
+									</div>
+							</div>
+							<!-- 6 -->
+							<div class="row">
+									<div class="col-xl board_square white_square heat_map_square" id = "a6">
+									 
+									</div>
+									<div class="col-xl board_square black_square heat_map_square" id = "b6">
+									 
+									</div>
+									<div class="col-xl board_square white_square heat_map_square" id = "c6">
+									 
+									</div>
+									<div class="col-xl board_square black_square heat_map_square" id = "d6">
+									 
+									</div>
+									<div class="col-xl board_square white_square heat_map_square" id = "e6">
+									 
+									</div>
+									<div class="col-xl board_square black_square heat_map_square" id = "f6">
+									 
+									</div>
+									<div class="col-xl board_square white_square heat_map_square" id = "g6">
+									 
+									</div>
+									<div class="col-xl board_square black_square heat_map_square" id = "h6">
+									 
+									</div>
+							</div>
+							<!-- 5 -->
+							<div class="row">
+									<div class="col-xl board_square black_square heat_map_square" id = "a5">
+									 
+									</div>
+									<div class="col-xl board_square white_square heat_map_square" id = "b5">
+									 
+									</div>
+									<div class="col-xl board_square black_square heat_map_square" id = "c5">
+									 
+									</div>
+									<div class="col-xl board_square white_square heat_map_square" id = "d5">
+									 
+									</div>
+									<div class="col-xl board_square black_square heat_map_square" id = "e5">
+									 
+									</div>
+									<div class="col-xl board_square white_square heat_map_square" id = "f5">
+									 
+									</div>
+									<div class="col-xl board_square black_square heat_map_square" id = "g5">
+									 
+									</div>
+									<div class="col-xl board_square white_square heat_map_square" id = "h5">
+									 
+									</div>
+							</div>
+							<!-- 4 -->
+							<div class="row">
+									<div class="col-xl board_square white_square heat_map_square" id = "a4">
+									 
+									</div>
+									<div class="col-xl board_square black_square heat_map_square" id = "b4">
+									 
+									</div>
+									<div class="col-xl board_square white_square heat_map_square" id = "c4">
+									 
+									</div>
+									<div class="col-xl board_square black_square heat_map_square" id = "d4">
+									 
+									</div>
+									<div class="col-xl board_square white_square heat_map_square" id = "e4">
+									 
+									</div>
+									<div class="col-xl board_square black_square heat_map_square" id = "f4">
+									 
+									</div>
+									<div class="col-xl board_square white_square heat_map_square" id = "g4">
+									 
+									</div>
+									<div class="col-xl board_square black_square heat_map_square" id = "h4">
+									 
+									</div>
+							</div>
+							<!-- 3 -->
+							<div class="row">
+									<div class="col-xl board_square black_square heat_map_square" id = "a3">
+									 
+									</div>
+									<div class="col-xl board_square white_square heat_map_square" id = "b3">
+									 
+									</div>
+									<div class="col-xl board_square black_square heat_map_square" id = "c3">
+									 
+									</div>
+									<div class="col-xl board_square white_square heat_map_square" id = "d3">
+									 
+									</div>
+									<div class="col-xl board_square black_square heat_map_square" id = "e3">
+									 
+									</div>
+									<div class="col-xl board_square white_square heat_map_square" id = "f3">
+									 
+									</div>
+									<div class="col-xl board_square black_square heat_map_square" id = "g3">
+									 
+									</div>
+									<div class="col-xl board_square white_square heat_map_square" id = "h3">
+									 
+									</div>
+							</div>
+							<!-- 2 -->
+							<div class="row">
+									<div class="col-xl board_square white_square heat_map_square" id = "a2">
+									 
+									</div>
+									<div class="col-xl board_square black_square heat_map_square" id = "b2">
+									 
+									</div>
+									<div class="col-xl board_square white_square heat_map_square" id = "c2">
+									 
+									</div>
+									<div class="col-xl board_square black_square heat_map_square" id = "d2">
+									 
+									</div>
+									<div class="col-xl board_square white_square heat_map_square" id = "e2">
+									 
+									</div>
+									<div class="col-xl board_square black_square heat_map_square" id = "f2">
+									 
+									</div>
+									<div class="col-xl board_square white_square heat_map_square" id = "g2">
+									 
+									</div>
+									<div class="col-xl board_square black_square heat_map_square" id = "h2">
+									 
+									</div>
+							</div>
+							<!-- 1 -->
+							<div class="row">
+									<div class="col-xl board_square black_square heat_map_square" id = "a1">
+									 
+									</div>
+									<div class="col-xl board_square white_square heat_map_square" id = "b1">
+									 
+									</div>
+									<div class="col-xl board_square black_square heat_map_square" id = "c1">
+									 
+									</div>
+									<div class="col-xl board_square white_square heat_map_square" id = "d1">
+									 
+									</div>
+									<div class="col-xl board_square black_square heat_map_square" id = "e1">
+									 
+									</div>
+									<div class="col-xl board_square white_square heat_map_square" id = "f1">
+									 
+									</div>
+									<div class="col-xl board_square black_square heat_map_square" id = "g1">
+									 
+									</div>
+									<div class="col-xl board_square white_square heat_map_square" id = "h1">
+									 
+									</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="scroll_element explainingViz">
+				<div style="font-size: 3em; text-align: center;">
+					Openings
+				</div>
+				<div class="row">
+					<div class="col-xl">
+						Knowing exactly what to play in the opening is very important.
+						The more one studies chess openings, the more he will be comfortable with finding traps, building sturdy pawn structures, and recognising solid development plans.<br><br>
+						Following is a sun-burst chart which visualises some of the most popular first 7 moves in a game.
+
+					</div>
+				</div>
+			</div>
+			<div class = "scroll_element">
+				<div class="row" id = "openingsViz">
+					<div class="col-xl-9">
+						<div id="main">
+						      <div id="sequence"></div>
+						      <div id="chart">
+						      </div>
+						 </div>
+					</div>
+					<div class="col-xl-6">
+						<div class="row">
+							<div class="col">
+								<div id="board3"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="scroll_element explainingViz">
+				<div style="font-size: 3em; text-align: center;">
+					Journey Map
+				</div>
+				<div class="row">
+					<div class="col-xl">
+						While playing chess, players often don't think about the path taken by their pieces throughout the game.<br><br>
+						The following visualisation illustrates the trajectory of a piece throughout a game. It effectively communicates the mobility of the piece and hence its potential on the board.
+
+					</div>
+				</div>
+			</div>
+			<div class = "scroll_element">
+				<div class="row" id = "journeyMapViz" style="margin-top: 3em;">
+					<div class="col-xl-3 settings">
+						
+						<div class="row">
+							<div class="col">
+								<div class="row">
+									<div class="col">
+										Select a piece:
+									</div>
+								</div>
+								<div class="row">
+									<div class="col">
+										<div id="board2"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="row" style="margin-top: 50px">
+							<div class="col">
+								<div class="row">
+									<div class="col">
+										Noise Reduction:
+									</div>
+								</div>
+								<div class="row">
+									<div class="col">
+										<div id="slidecontainer">
+										  <input type="range" min="100" max="350" value="225" class="slider" id="myRange">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+					</div>
+					<div class="col-xl-6">
+						<div class="col" id = "journeyMap" style="padding-left: 0px; padding-right: 0px">
+							  	<div class="cdv-move-paths" id="movepaths">
+									</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			</div>
+		</div>
+
+		<!-- Optional JavaScript -->
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script type="text/javascript" src="scripts/data.js"></script>
+		<script type="text/javascript" src="scripts/jquery.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+		<script type="text/javascript" src="scripts/chessboard-0.3.0.js"></script>
+		<script src="scripts/ChessDataViz.js"></script>
+		<script type="text/javascript" src="scripts/script.js"></script>
+	</body>
 </html>
