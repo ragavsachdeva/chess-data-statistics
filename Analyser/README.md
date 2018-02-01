@@ -47,7 +47,7 @@ The basic usage:
 ```
 import analyse
 
-file = open("replaceThisWithYourFileName.pgn", "rw+")
+file = open("replaceThisWithYourFileName.pgn", "r+")
 games = file.readlines()
 file.close()
 
