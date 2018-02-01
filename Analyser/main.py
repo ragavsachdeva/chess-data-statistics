@@ -1,6 +1,6 @@
 import analyse
 
-file = open("test_input.pgn", "rw+")
+file = open("test_input.pgn", "r+")
 games = file.readlines()
 file.close()
 
@@ -10,6 +10,20 @@ file.close()
 # analyser = analyse.CapturedSquares()
 # analyser.start(games)
 
+# Compute the frequency of capturing squares
+
+# analyser = analyse.CapturingSquares()
+# analyser.start(games)
+
+#Opening Moves
+
+# analyser = analyse.ComputeOpenings()
+# analyser.start(games)
+
+#Compute the frequency of square utilisation
+
+# analyser = analyse.SquareUtilisation()
+# analyser.start(games)
 
 
 # Compute the first move distribution
@@ -18,12 +32,10 @@ file.close()
 # analyser.start(games)
 
 
-
 # Compute the path trajectory
 
 # analyser = analyse.PathTrajectory()
 # analyser.start(games)
-
 
 
 # Compute number of White wins, Black wins and Draws

@@ -123,8 +123,37 @@ class CapturedSquares(object):
 
 		with open('output.txt', 'a') as file:
 		 file.write(json.dumps(self.board.capturedSquares))
-		 file.write('\n\n')
-		 file.write(json.dumps(self.board.totalCaptured))
+
+class CapturingSquares(object):
+
+	def __init__(self):
+		self.board = chess.Board()
+
+	def simulateGame(self,moves):
+		for move in moves:
+			self.board.capturing_squares_frequency(move)
+
+	def start(self,chessGames):
+		for pgn_text in chessGames:
+			lines = _pre_process_text(pgn_text)
+			token = _next_token(lines)
+			
+			if token == '#######':
+				break
+
+			if not token:
+				pass
+
+			elif token.startswith("1. "):
+				self.board.reset()
+				moves = _parse_moves(token)
+				self.simulateGame(moves)
+
+			else:
+				pass
+
+		with open('output.txt', 'a') as file:
+		 file.write(json.dumps(self.board.capturingSquares))
 
 class FirstMoveDistribution(object):
 
@@ -194,3 +223,73 @@ class PathTrajectory:
 
 		with open('output.txt', 'a') as file:
 		 file.write(json.dumps(self.board.piecePath))
+
+class SquareUtilisation(object):
+
+	def __init__(self):
+		self.board = chess.Board()
+
+	def simulateGame(self,moves):
+		for move in moves:
+			self.board.square_utilisation(move)
+
+	def start(self,chessGames):
+
+		for pgn_text in chessGames:
+			lines = _pre_process_text(pgn_text)
+			token = _next_token(lines)
+			
+			if token == '#######':
+				break
+
+			if not token:
+				pass
+
+			elif token.startswith("1. "):
+				self.board.reset()
+				moves = _parse_moves(token)
+				self.simulateGame(moves)
+
+			else:
+				pass
+
+		with open('output.txt', 'a') as file:
+		 file.write(json.dumps(self.board.squareUtilisation))
+
+class ComputeOpenings(object):
+
+	def __init__(self):
+		self.board = chess.Board()
+
+	def simulateGame(self,moves):
+		openingMoves = []
+		if len(moves) < 7:
+			pass
+		else:
+			for x in range(0, 7):
+				openingMoves.append(moves[x])
+		
+			self.board.compute_openings(openingMoves)
+
+	def start(self,chessGames):
+
+		for pgn_text in chessGames:
+			lines = _pre_process_text(pgn_text)
+			token = _next_token(lines)
+			
+			if token == '#######':
+				break
+
+			if not token:
+				pass
+
+			elif token.startswith("1. "):
+				self.board.reset()
+				moves = _parse_moves(token)
+				self.simulateGame(moves)
+
+			else:
+				pass
+
+		with open('output.txt', 'a') as file:
+		 file.write(json.dumps(self.board.openings))
