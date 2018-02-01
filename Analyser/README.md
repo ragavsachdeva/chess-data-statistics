@@ -6,37 +6,37 @@ Python modules that analyses chess game(s) in PGN format
 
 * Captured Squares - the squares where a particular piece was captured.<br />
 ```
-	Output format: {"all": {"Square": frequency, ...}, "wall": {"Square": frequency, ...}, "ball", {"Square": frequency, ...}, "Ra1": {"Square": frequency, ...}, "Nb1":{"Square": frequency, ...}...}
+Output format: {"all": {"Square": frequency, ...}, "wall": {"Square": frequency, ...}, "ball", {"Square": frequency, ...}, "Ra1": {"Square": frequency, ...}, "Nb1":{"Square": frequency, ...}...}
 ```
 
 * Capturing Squares - the squares where a particular piece attacks.<br />
 ```
-	Output format: {"all": {"Square": frequency, ...}, "wall": {"Square": frequency, ...}, "ball", {"Square": frequency, ...}, "Ra1": {"Square": frequency, ...}, "Nb1":{"Square": frequency, ...}...}
+Output format: {"all": {"Square": frequency, ...}, "wall": {"Square": frequency, ...}, "ball", {"Square": frequency, ...}, "Ra1": {"Square": frequency, ...}, "Nb1":{"Square": frequency, ...}...}
 ```
 
 * Opening Moves - variations of first 7 opening moves<br />
 ```
-	Output format: openings = {"name": "ref", "children": [{"name":piece,"move":PGN,"children":[...]},{"name":piece,"move":PGN,"children":[...]}, ..]}
+Output format: openings = {"name": "ref", "children": [{"name":piece,"move":PGN,"children":[...]},{"name":piece,"move":PGN,"children":[...]}, ..]}
 ```
 
 * Square Utilisation - frequency of a particular piece utilising each square<br />
 ```
-	Output format: {piece: {square: counter, square: counter...}, piece: {square: counter, square: counter...} ... }
+Output format: {piece: {square: counter, square: counter...}, piece: {square: counter, square: counter...} ... }
 ```
 
 * First Move Distribution - frequency of the point at which a piece is first moved in a game<br />
 ```
-	Output format: {"Square": {"move_number": frequency}, ...}
+Output format: {"Square": {"move_number": frequency}, ...}
 ```
 
 * Path trajectory - path taken by a piece throughout his life<br />
 ```
-	Output format: {"Piece": {"from-to": frequency, ...}, ...}
+Output format: {"Piece": {"from-to": frequency, ...}, ...}
 ```
 
 * Win Ratio - number of White wins, Black wins and Draws<br />
 ```
-	Output format: White Wins: frequency, Black Wins: frequency, Draws: frequency
+Output format: White Wins: frequency, Black Wins: frequency, Draws: frequency
 ```
 
 
