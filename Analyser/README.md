@@ -16,7 +16,7 @@ Output format: {"all": {"Square": frequency, ...}, "wall": {"Square": frequency,
 
 * Opening Moves - variations of first 7 opening moves<br />
 ```
-Output format: openings = {"name": "ref", "children": [{"name":piece,"move":PGN,"children":[...]},{"name":piece,"move":PGN,"children":[...]}, ..]}
+Output format: {"name": "ref", "children": [{"name":piece,"move":PGN,"children":[...]},{"name":piece,"move":PGN,"children":[...]}, ..]}
 ```
 
 * Square Utilisation - frequency of a particular piece utilising each square<br />
