@@ -1,12 +1,12 @@
-# Chess Data Visualisation
+# Chess Data Statistics
 
-A package that analyses chess games (in PGN format) using python modules along with a visualisation template using HTML, JS and CSS
+A package that analyses chess games (in PGN format) using python modules along with a visualisation template that uses HTML, JS and CSS
 
 ### Functionality
 
 * A PGN parser
 * A game "simulator" - move generation and validation
-* A game analyser - Capture Squares Frequency, First Move Distibution, Piece Trajectory and Win Ratio - [more info](/Analyser/README.md)
+* A game analyser - Captured Squares Frequency, First Move Distibution, Piece Trajectory, Win Ratio, Opening Moves, Capturing Squares Frequence and Square Utilisation - [more info](/Analyser/README.md)
 * Data visualisation
 
 ## Getting Started
@@ -17,7 +17,7 @@ Assuming that you have a PGN file with some chess games, you can use: <br />
 
 ### Prerequisites
 
-You need to have python installed on your computer in order to use analysis modules
+You need to have python installed on your computer in order to use the analysis module
 
 ## Author
 
